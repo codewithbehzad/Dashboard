@@ -1,0 +1,635 @@
+/* 1. Remove some default setting  */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none;
+  list-style: none;
+}
+/* 2. change font size (per 1rem is equal to 10px ) */
+html {
+  font-size: 62.5%;
+}
+/* 3. Allow percentage-based heights in the application */
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* variables */
+:root {
+  --primary-color: #5e81f4;
+  --header-primary: #e5e5e5;
+  --header-secondary: #768492;
+  --primary-aside: #011f3b;
+}
+
+/* main Grid template */
+.grid {
+  display: grid;
+  grid-template-columns: 15% 60% 25%;
+}
+
+/* start sidebar */
+.sidebar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 4rem;
+  gap: 5rem;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.sidebar-brand h2 {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+}
+.sidebar .join__btn {
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  padding: 1rem;
+}
+.sidebar .join__btn a {
+  color: #fff;
+  font-size: 1.6rem;
+}
+.sidebar .join__btn:hover {
+  background-color: #8b9dd8;
+}
+
+.sidebar__menu {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  justify-content: center;
+}
+
+/* sidebar dashboard */
+.sidebar__menu .dashboard {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  border-radius: 8px;
+  gap: 2rem;
+}
+.sidebar__menu .dashboard:hover {
+  background-color: #d6d6e4;
+  cursor: pointer;
+}
+.sidebar__menu .dashboard:hover a {
+  color: black;
+}
+.sidebar__menu .dashboard:hover i {
+  color: var(--primary-color);
+}
+.sidebar__menu .dashboard a {
+  color: #8da1b5;
+}
+.sidebar__menu .dashboard i {
+  font-size: 2rem;
+  color: #c7cadd;
+}
+
+/* upgrade section */
+.upgrade {
+  margin-top: 4rem;
+  background-color: #f5f5fb;
+  padding: 2rem 2.5rem;
+  position: relative;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.upgrade p {
+  margin-top: 5rem;
+  font-size: 1.6rem;
+  white-space: nowrap;
+  text-align: center;
+  color: #778dad;
+}
+.upgrade img {
+  position: absolute;
+  top: -50px;
+  right: auto;
+  left: auto;
+}
+.upgrade button {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 1rem 4rem;
+  border-radius: 10px;
+}
+.upgrade button:hover {
+  background: #8b9dd8;
+  cursor: pointer;
+}
+
+/* start container section */
+.container {
+  background: #f5f5fb;
+  height: 100%;
+  padding: 4rem 3rem;
+}
+/* header section */
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search .bx-bell {
+  font-size: 2.5rem;
+  color: var(--header-secondary);
+}
+.search .bx-bell:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.search__input i {
+  padding: 1.22rem;
+  background: #fff;
+  font-size: 2rem;
+  color: var(--header-secondary);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.search__input {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.search__input input {
+  width: 40rem;
+  padding: 1.5rem;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.search__input input::placeholder {
+  font-size: 2rem;
+  color: #e5e5e5;
+}
+
+.header h1 {
+  font-size: 2.8rem;
+}
+.header__titiles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6rem 0 2rem 0;
+}
+.header__titiles ul {
+  display: flex;
+  gap: 3rem;
+}
+.header__titiles a {
+  font-size: 1.8rem;
+  color: var(--header-secondary);
+  position: relative;
+}
+.header__titiles a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  color: var(--primary-color);
+}
+.header__titiles a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom;
+  color: var(--primary-color);
+}
+.header__titiles a:hover {
+  color: var(--primary-color);
+}
+
+/* main section */
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  row-gap: 3rem;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "ui ui"
+    "animation photography";
+}
+
+/* cards ui ux course */
+.card-uiux {
+  grid-area: ui;
+  position: relative;
+  cursor: pointer;
+}
+.card-uiux > img {
+  border-radius: 10px;
+}
+.card-uiux .card-uiux--img {
+  border-radius: 10px;
+}
+.uiux__text {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.uiux__text h3 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #fff;
+}
+.uiux__text p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #fff;
+  opacity: 80%;
+}
+.uiux__img img:nth-child(2) {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+}
+.uiux__img img:nth-child(1) {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+}
+.uiux__duration {
+  position: absolute;
+  right: 8%;
+  color: #fff;
+  font-size: 1.6rem;
+  opacity: 80%;
+  top: 25%;
+}
+
+/* photography course */
+.cards__photography {
+  grid-area: photography;
+  position: relative;
+  cursor: pointer;
+}
+.cards__photography > img {
+  border-radius: 10px;
+}
+.photography__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.photography__text h3 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #fff;
+}
+.photography__text p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #fff;
+  opacity: 80%;
+}
+
+.photography__img img:nth-child(2) {
+  position: absolute;
+  bottom: 20%;
+  right: 5%;
+}
+.photography__img img:nth-child(1) {
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+}
+
+.photo-wrapper__img {
+  position: absolute;
+  bottom: 10%;
+}
+.photography__duration p {
+  position: absolute;
+  right: 8%;
+  top: 25%;
+  color: #fff;
+  font-size: 1.6rem;
+  opacity: 80%;
+}
+
+/* cards Animation course */
+.cards__animation {
+  grid-area: animation;
+  position: relative;
+  cursor: pointer;
+}
+
+.cards__animation > img {
+  border-radius: 10px;
+}
+
+/* start left-aside */
+.left-aside {
+  background-color: #fff;
+  height: 100%;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+.teacher-avatar {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+.teacher-avatar select {
+  font-size: 2rem;
+  color: var(--primary-aside);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ui ux progress bar */
+.ui-ux {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.progress h4 {
+  font-size: 1.6rem;
+}
+.progress h5 {
+  font-size: 1.4rem;
+  color: #83919e;
+  margin-top: 0.5rem;
+}
+.progress p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-aside);
+}
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.progressbar-container {
+  width: 35%;
+  height: 1rem;
+  background-color: #dfe6fd;
+  border-radius: 21px;
+  text-align: center;
+}
+.progressbar {
+  height: 1rem;
+  width: 60%;
+  border-radius: 21px;
+  background-color: #5e81f4;
+  color: #5e81f4;
+}
+.progressbar-container2 {
+  width: 35%;
+  height: 1rem;
+  background-color: #d3f4fb;
+  border-radius: 21px;
+  text-align: center;
+}
+.progressbar2 {
+  height: 1rem;
+  width: 60%;
+  border-radius: 21px;
+  background-color: #0cc3e7;
+  color: #0cc3e7;
+}
+.progressbar-container3 {
+  width: 35%;
+  height: 1rem;
+  background-color: #ffe6e8;
+  border-radius: 21px;
+  text-align: center;
+}
+.progressbar3 {
+  height: 1rem;
+  width: 60%;
+  border-radius: 21px;
+  background-color: #ffae33;
+  color: #ffae33;
+}
+
+.next-plans {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5rem;
+}
+.next-plans h4 {
+  font-size: 1.6rem;
+}
+.next-plans h5 {
+  font-size: 1.4rem;
+  color: #83919e;
+  margin-top: 0.5rem;
+}
+.next-plans p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-aside);
+}
+
+/* Download section */
+.download {
+  position: relative;
+}
+.download__details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem 2rem;
+}
+.download__details > div {
+  margin-top: 1rem;
+  display: flex;
+}
+@media screen and (max-width: 1024px) {
+  .left-aside {
+    opacity: 0;
+    display: none;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+  }
+  .sidebar {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 2rem 2rem;
+  }
+  .sidebar {
+    display: none;
+    opacity: 0;
+  }
+  .search {
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-uiux--img {
+    height: 40vh;
+    width: 100%;
+  }
+  .cards__photography > img {
+    width: 100%;
+    height: 100%;
+  }
+  .cards__animation > img {
+    width: 100%;
+  }
+  .search__input input {
+    width: 20rem;
+    text-align: right;
+  }
+  .search__input i {
+    padding: rem;
+  }
+  .search__input > input::placeholder {
+    font-size: 1.5rem;
+  }
+  .header__titiles h1 {
+    font-size: 1.5rem;
+  }
+  .header__titiles a {
+    font-size: 1.3rem;
+  }
+  .header__titiles ul {
+    gap: 1rem;
+  }
+  /* ui ux card */
+  .uiux__text {
+    padding: 3rem 1rem;
+  }
+  .uiux__text h3 {
+    font-size: 1.8rem;
+    line-height: 0;
+  }
+  .uiux__text p {
+    font-size: 1.4rem;
+  }
+  .uiux__duration {
+    font-size: 1.4rem;
+    top: 35%;
+  }
+  .uiux__img img:nth-child(2) {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+  }
+  .uiux__img img:nth-child(1) {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+  }
+  /* photography */
+  .photography__text {
+    padding: 3rem 1rem;
+  }
+  .photography__text h3 {
+    font-size: 1.8rem;
+    line-height: 0;
+  }
+  .photography__text p {
+    font-size: 1.4rem;
+  }
+  .photography__duration p {
+    font-size: 1.4rem;
+    top: 35%;
+  }
+  .photography__img img:nth-child(2) {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+  }
+  .photography__img img:nth-child(1) {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+  }
+}
