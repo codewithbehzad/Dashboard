@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- linked fonts and styles -->
+    <link rel="stylesheet" href="/styles/fonts.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <!-- font awesome cdn -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>My Dashboard</title>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="sidebar sticky">
+        <div class="sidebar-brand">
+          <h2>اوهارا</h2>
+          <img src="assets/images/icon.png" alt="icon" />
+        </div>
+        <button class="join__btn"><a href="#">شرکت در دوره</a></button>
+        <div class="sidebar__menu">
+          <div class="dashboard">
+            <i class="bx bx-book-content"></i>
+            <a>داشبورد</a>
+            <!-- <i class='bx bx-user' ></i>  -->
+          </div>
+          <div class="dashboard">
+            <i class="bx bx-grid-alt"></i>
+            <a>دوره ها</a>
+          </div>
+          <div class="dashboard">
+            <i class="bx bx-folder"></i>
+            <a>منابع</a>
+          </div>
+          <div class="dashboard">
+            <i class="bx bx-user"></i>
+            <a>دوستان</a>
+          </div>
+          <div class="dashboard">
+            <i class="bx bx-comment-dots"></i>
+            <a>چت</a>
+          </div>
+          <div class="dashboard">
+            <i class="bx bx-cog"></i>
+            <a>تنظیمات</a>
+          </div>
+        </div>
+
+        <div class="upgrade">
+          <img src="assets/images/Frame.png" alt="letter" />
+          <p>
+            برای دسترسی به <br />
+            منابع بیشتر <br />ارتقا دهید
+          </p>
+          <button>ارتقا</button>
+        </div>
+      </div>
+      <div class="container">
+        <header class="header">
+          <div class="search">
+            <div class="search__input">
+              <i class="bx bx-search"></i>
+              <input type="text" placeholder="جستجو" />
+            </div>
+            <i class="bx bx-bell"></i>
+          </div>
+          <div class="header__titiles">
+            <div>
+              <h1>همه دوره ها</h1>
+            </div>
+            <div>
+              <ul>
+                <li><a href="#">درحال برگزاری</a></li>
+                <li><a href="#">دلخواه</a></li>
+                <li><a href="#">تمام شده</a></li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <main class="main">
+          <div class="cards">
+            <div class="card-uiux">
+              <img
+                class="card-uiux--img"
+                src="assets/images/uiux.png"
+                alt="UI Ux"
+              />
+              <div class="uiux__text">
+                <h3>Ui/Ux Design</h3>
+                <p>جلسه 15</p>
+              </div>
+              <div class="uiux__img">
+                <img src="assets/images/play.png" alt="play" />
+                <img src="assets/images/avatar.png" alt="avatar" />
+              </div>
+              <div class="uiux__duration">
+                <p>20 ساعت و 30 دقیقه</p>
+              </div>
+            </div>
+            <div class="cards__photography">
+              <img src="assets/images/photography.png" alt="Photography" />
+              <div class="photography__text">
+                <h3>photography</h3>
+                <p>جلسه 14</p>
+              </div>
+              <div class="photography__img">
+                <img src="assets/images/play.png" alt="play" />
+                <img src="assets/images/avatart2.png" alt="avatar" />
+              </div>
+              <div class="photography__duration">
+                <p>20 ساعت و 30 دقیقه</p>
+              </div>
+            </div>
+            <div class="cards__animation">
+              <img src="assets/images/animation.png" alt="Animation" />
+              <div class="photography__text">
+                <h3>Animation</h3>
+                <p>جلسه 8</p>
+              </div>
+              <div class="photography__img">
+                <img src="assets/images/play.png" alt="play" />
+                <img src="assets/images/avatar.png" alt="avatar" />
+              </div>
+              <div class="photography__duration">
+                <p>20 ساعت و 30 دقیقه</p>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <!-- start left aside -->
+      <div class="left-aside">
+        <div class="teacher-avatar">
+          <img src="assets/images/main-avatar.png" alt="Avatar" />
+          <label>
+            <select>
+              <option class="teachers" selected value="1">الکسیا روچ</option>
+              <option class="teachers" value="2">حسین بهزاد</option>
+            </select>
+          </label>
+        </div>
+        <div class="progress">
+          <p>وضعیت دوره ها</p>
+          <div class="ui-ux">
+            <img src="assets/images/pen.png" alt="Pen" />
+            <div>
+              <h4>UI UX Design</h4>
+              <h5>حرفه ای</h5>
+            </div>
+            <div class="progressbar-container">
+              <div class="progressbar">2</div>
+            </div>
+          </div>
+          <div class="ui-ux">
+            <img src="assets/images/camera.png" alt="Pen" />
+            <div>
+              <h4>Photography</h4>
+              <h5>حرفه ای</h5>
+            </div>
+            <div class="progressbar-container2">
+              <div class="progressbar2">2</div>
+            </div>
+          </div>
+          <div class="ui-ux">
+            <img src="assets/images/zigzog.png" alt="Pen" />
+            <div>
+              <h4>Animation</h4>
+              <h5>حرفه ای</h5>
+            </div>
+            <div class="progressbar-container3">
+              <div class="progressbar3">2</div>
+            </div>
+          </div>
+        </div>
+        <!-- upcoming task -->
+        <div class="progress">
+          <p>برنامه های آتی</p>
+          <div class="next-plans">
+            <img src="assets/images/message.png" alt="message" />
+            <div>
+              <h4>UI/UX - Discussion</h4>
+              <h5>جهارشنبه، 27 اکتبر 2020</h5>
+            </div>
+          </div>
+          <div class="next-plans">
+            <img src="assets/images/3d.png" alt="animation" />
+            <div>
+              <h4>Animation - 3D Animation</h4>
+              <h5>جهارشنبه، 27 اکتبر 2020</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Download section -->
+        <div class="download">
+          <img src="assets/images/bg-download.png" alt="background" />
+          <div class="download__details">
+            <h2>اوهارا را الان <br />دانلود کنید</h2>
+            <div>
+              <img src="assets/images/apple.png" alt="apple" />
+              <img src="assets/images/google-play.png" alt="google play" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
